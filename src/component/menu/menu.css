@@ -1,0 +1,46 @@
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all .5s;
+  margin: 8px auto;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 24px;
+}
+.navBar:hover {
+  background: #22202028;
+}
+.navTitleContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+.navTitleContainer i {
+  margin-right: 16px;
+}
+.navActionContianer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  visibility: hidden;
+}
+.navBar:hover .navActionContianer {
+  visibility: visible;
+}
+.navActionContianer button {
+  margin-left: 16px;
+  font-size: 18px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #1890ff;
+}
+.navActionContianer button.disabled {
+  cursor: not-allowed;
+  color: rgba(0, 0, 0, 0.25);
+}
+.hidden {
+  visibility: hidden;
+}
