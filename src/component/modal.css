@@ -13,9 +13,18 @@
     position: relative;
     top: 100px;
     width: auto;
-    margin: 0 auto;
     padding-bottom: 24px;
     pointer-events: none;
+}
+.modal-wrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    overflow: auto;
+    outline: 0;
 }
 .hidden {
     visibility: hidden;
@@ -32,7 +41,7 @@
 }
 .modal-content {
     z-index: 1001;
-    width: 500px;
+    width: 400px;
     position: relative;
     background-color: #fff;
     background-clip: padding-box;
