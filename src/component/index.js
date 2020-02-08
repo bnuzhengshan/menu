@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Menu from './menu/menu';
 import SubMenu from './menu/subMenu';
 import Modal from './modal'
@@ -170,10 +170,12 @@ class Nav extends React.Component {
     render() {
         const { data, name, showAddModal } = this.state;
         return (
-            <div className='mainContainer'>
-                <Menu>
-                    {this.renderMenu(data)}
-                </Menu>
+            <Fragment>
+                <div className='mainContainer'>
+                    <Menu>
+                        {this.renderMenu(data)}
+                    </Menu>
+                </div>
                 <Modal
                     title='编辑名称'
                     show={showAddModal}
@@ -182,7 +184,7 @@ class Nav extends React.Component {
                 >
                     <input className='nameInput' type='text' value={name} onChange={this.handleChangeName} placeholder='请输入内容' />
                 </Modal>
-            </div>
+            </Fragment>
         )
     }
 }
